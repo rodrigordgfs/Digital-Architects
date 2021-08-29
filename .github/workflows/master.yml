@@ -28,4 +28,4 @@ jobs:
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         local-dir: dist/
-        server-dir: /projects.shinodalabs.com.br/digital-architects
+        server-dir: /projects.shinodalabs.com.br/digital-architects/
