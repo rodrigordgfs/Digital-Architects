@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: "header",
+  name: "headerApp",
 
   computed: {
     routes() {
@@ -61,7 +61,7 @@ export default {
 
 <style lang="scss">
 header {
-  width: 80vw;
+  max-width: 1100px;
   height: 100px;
   margin: 0 auto;
   display: flex;
