@@ -1,46 +1,54 @@
 <template>
-    <header>
-        <div class="header__brand">
-            <a href="#">
-                <img
-                    src="../../assets/logo.svg"
-                    alt="Logo Digital Architects"
-                />
-            </a>
-        </div>
-        <nav id="header__menu">
-            <button
-                id="header__menu_btn-mobile"
-                aria-label="Abrir menu"
-                aria-haspop="true"
-                aria-controls="menu"
-                aria-expanded="false"
-                @click="toogleMenu"
-            >
-                Menu
-                <span id="header__menu_btn-mobile_hamburguer"></span>
-            </button>
-            <ul class="header__menu_items" role="menu" @click="toogleItemMenu">
-                <li v-for="route in routes" :key="route.path">
-                    <router-link
-                        :class="
-                            currentRouteName === route.name
-                                ? 'menu__active'
-                                : ''
-                        "
-                        class="header__menu_items_link"
-                        :to="route.path"
-                        >{{ route.name }}</router-link
-                    >
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="header__brand">
+      <a href="#">
+        <img
+          src="../../assets/logo.svg"
+          alt="Logo Digital Architects"
+        >
+      </a>
+    </div>
+    <nav id="header__menu">
+      <button
+        id="header__menu_btn-mobile"
+        aria-label="Abrir menu"
+        aria-haspop="true"
+        aria-controls="menu"
+        aria-expanded="false"
+        @click="toogleMenu"
+      >
+        Menu
+        <span id="header__menu_btn-mobile_hamburguer" />
+      </button>
+      <ul
+        class="header__menu_items"
+        role="menu"
+        @click="toogleItemMenu"
+      >
+        <li
+          v-for="route in routes"
+          :key="route.path"
+        >
+          <router-link
+            :class="
+              currentRouteName === route.name
+                ? 'menu__active'
+                : ''
+            "
+            class="header__menu_items_link"
+            :to="route.path"
+          >
+            {{ route.name }}
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script>
 export default {
-    name: "headerApp",
+    name: "HeaderApp",
 
     computed: {
         routes() {

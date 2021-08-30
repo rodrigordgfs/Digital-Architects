@@ -1,7 +1,10 @@
 <template>
-  <button class="button-action" @click="click">
+  <button
+    class="button-action"
+    @click="click"
+  >
     <p>{{ label }}</p>
-    <img src="img/icons/right.svg" />
+    <img src="img/icons/right.svg">
   </button>
 </template>
 
@@ -44,6 +47,7 @@ export default {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
+    letter-spacing: 3px;
   }
 }
 </style>

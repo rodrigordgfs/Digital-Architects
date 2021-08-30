@@ -1,10 +1,10 @@
 <template>
   <span
     class="button-indicator"
-    @click="click"
     :class="disabled ? 'button-indicator__disabled' : null"
+    @click="click"
   >
-    <img :src="icon" />
+    <img :src="icon">
   </span>
 </template>
 

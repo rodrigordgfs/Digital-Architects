@@ -2,8 +2,12 @@
   <section class="projects">
     <div class="projects__content">
       <div class="projects__content__text">
-        <p class="projects__content__text__title">{{ firstTitle }}</p>
-        <p class="projects__content__text__title__bold">{{ secondTitle }}</p>
+        <p class="projects__content__text__title">
+          {{ firstTitle }}
+        </p>
+        <p class="projects__content__text__title__bold">
+          {{ secondTitle }}
+        </p>
       </div>
       <div class="projects__content__actions">
         <button-indicator
@@ -24,9 +28,12 @@
       <div
         class="projects__image_picture"
         :style="{ backgroundImage: 'url(' + project.image + ')' }"
-      ></div>
+      />
       <div class="projects__image_button">
-        <button-action label="View Project" :click="openProject" />
+        <button-action
+          label="View Project"
+          :click="openProject"
+        />
       </div>
     </div>
   </section>
@@ -37,7 +44,7 @@ import ButtonIndicator from "@/components/shared/ButtonIndicator";
 import ButtonAction from "@/components/shared/ButtonAction";
 
 export default {
-  name: "projects",
+  name: "Projects",
 
   components: {
     ButtonIndicator,
@@ -78,28 +85,6 @@ export default {
     };
   },
 
-  mounted() {
-    this.project = this.projects[0];
-  },
-
-  methods: {
-    previousProject() {
-      if (this.projects.indexOf(this.project) > 0) {
-        this.project = this.projects[this.projects.indexOf(this.project) - 1];
-      }
-    },
-
-    nextProject() {
-      if (this.projects.indexOf(this.project) < this.projects.length - 1) {
-        this.project = this.projects[this.projects.indexOf(this.project) + 1];
-      }
-    },
-
-    openProject() {
-      this.$router.push(`/projects/${this.project}`);
-    },
-  },
-
   computed: {
     firstTitle() {
       if (this.project.name) {
@@ -121,6 +106,28 @@ export default {
 
     disableLast() {
       return this.projects.indexOf(this.project) === this.projects.length - 1;
+    },
+  },
+
+  mounted() {
+    this.project = this.projects[0];
+  },
+
+  methods: {
+    previousProject() {
+      if (this.projects.indexOf(this.project) > 0) {
+        this.project = this.projects[this.projects.indexOf(this.project) - 1];
+      }
+    },
+
+    nextProject() {
+      if (this.projects.indexOf(this.project) < this.projects.length - 1) {
+        this.project = this.projects[this.projects.indexOf(this.project) + 1];
+      }
+    },
+
+    openProject() {
+      this.$router.push(`/projects/${this.project}`);
     },
   },
 };
