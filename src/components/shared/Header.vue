@@ -64,6 +64,7 @@ header {
   max-width: 1100px;
   height: 100px;
   margin: 0 auto;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

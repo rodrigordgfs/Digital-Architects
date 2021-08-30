@@ -19,7 +19,6 @@
           :click="nextProject"
         />
       </div>
-      <counter :current="currentProject" :total="totalProjects" />
     </div>
     <div class="projects__image">
       <div
@@ -34,7 +33,6 @@
 </template>
 
 <script>
-import Counter from "@/components/shared/Counter";
 import ButtonIndicator from "@/components/shared/ButtonIndicator";
 import ButtonAction from "@/components/shared/ButtonAction";
 
@@ -42,7 +40,6 @@ export default {
   name: "projects",
 
   components: {
-    Counter,
     ButtonIndicator,
     ButtonAction,
   },
@@ -89,16 +86,6 @@ export default {
   },
 
   computed: {
-    totalProjects() {
-      const total = this.projects.length;
-      return total < 10 ? `0${total}` : total;
-    },
-
-    currentProject() {
-      const current = this.projects.indexOf(this.project) + 1;
-      return current < 10 ? `0${current}` : current;
-    },
-
     firstTitle() {
       if (this.project.name) {
         return this.project.name.split(" ")[0];
@@ -128,13 +115,14 @@ export default {
 .projects {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   .projects__content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-self: flex-end;
+    align-self: center;
     .projects__content__text {
       .projects__content__text__title {
         font-family: "Roboto", sans-serif;
@@ -155,7 +143,7 @@ export default {
       flex-direction: row;
       align-items: center;
       gap: 10px;
-      margin: 90px 0;
+      margin-top: 50px;
     }
   }
   .projects__image {
@@ -176,6 +164,29 @@ export default {
   }
 }
 
-@media only screen and (max-width: 915px) {
+@media only screen and (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    .projects__content {
+      justify-content: center;
+      align-items: center;
+      .projects__content__text {
+        .projects__content__text__title {
+          text-align: center;
+        }
+        .projects__content__text__title__bold {
+          text-align: center;
+        }
+      }
+      .projects__content__actions {
+        margin: 10px 0 20px;
+      }
+    }
+    .projects__image {
+      .projects__image_picture {
+        height: 350px;
+      }
+    }
+  }
 }
 </style>
