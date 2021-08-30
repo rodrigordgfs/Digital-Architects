@@ -19,7 +19,7 @@
       </button>
       <ul class="header__menu_items" role="menu" @click="toogleItemMenu">
         <li v-for="route in routes" :key="route.path">
-          <router-link class="header__menu_items_link" :to="route.path">{{
+          <router-link :class="currentRouteName === route.name ? 'menu__active' : ''" class="header__menu_items_link" :to="route.path">{{
             route.name
           }}</router-link>
         </li>
@@ -36,6 +36,10 @@ export default {
     routes() {
       return this.$router.options.routes;
     },
+
+    currentRouteName() {
+      return this.$route.name;
+    }
   },
 
   methods: {
@@ -76,6 +80,9 @@ header {
       display: flex;
       gap: 60px;
       li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .header__menu_items_link {
           display: block;
           font-size: 12px;
@@ -95,6 +102,16 @@ header {
 
 #header__menu_btn-mobile {
   display: none;
+}
+
+.menu__active::after, .menu__active::before {
+  content: '';
+  width: inherit;
+  height: 1px;
+  margin: 5px 0;
+  background-color: #333333;
+  display: block;
+  text-align: center;
 }
 
 @media only screen and (max-width: 915px) {

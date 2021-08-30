@@ -49,7 +49,7 @@ export default {
       projects: [
         {
           id: 1,
-          name: "Mozaic House",
+          name: "Mozaic Lorem",
           image: "https://i.imgur.com/uorVayz.png",
         },
         {
