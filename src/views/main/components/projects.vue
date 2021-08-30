@@ -57,6 +57,21 @@ export default {
           name: "Modern House",
           image: "https://i.imgur.com/8zy7NWp.jpg",
         },
+        {
+          id: 3,
+          name: "Villa Savoye",
+          image: "https://i.imgur.com/wgZkX7h.jpg",
+        },
+        {
+          id: 4,
+          name: "Eero Saarinen",
+          image: "https://i.imgur.com/bFTiR7R.jpg",
+        },
+        {
+          id: 5,
+          name: "Eames House",
+          image: "https://i.imgur.com/S4UI8xI.jpg",
+        },
       ],
 
       project: {},
