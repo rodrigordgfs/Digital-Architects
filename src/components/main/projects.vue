@@ -27,7 +27,10 @@
         :style="{ backgroundImage: 'url(' + project.image + ')' }"
       />
       <div class="projects__image_button">
-        <button-action label="View Project" :click="openProject" />
+        <button-action
+          label="View Project"
+          :click="openProject"
+        />
       </div>
     </div>
   </section>

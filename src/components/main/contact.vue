@@ -1,6 +1,9 @@
 <template>
   <section class="contact">
-    <head-title class="contact__title" label="Contact Us" />
+    <head-title
+      class="contact__title"
+      label="Contact Us"
+    />
     <div class="contact__container">
       <form class="contact__form">
         <input-text
