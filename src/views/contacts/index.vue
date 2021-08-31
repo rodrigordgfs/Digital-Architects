@@ -50,7 +50,7 @@ export default {
   },
 
   mounted() {
-    // this.scrollReveal();
+    this.scrollReveal();
   },
 
   methods: {
@@ -58,13 +58,30 @@ export default {
 
     scrollReveal() {
       let sr = ScrollReveal({
-        origin: "top",
+        origin: "left",
         distance: "50px",
         duration: 2000,
         reset: true,
       });
 
-      sr.reveal(".contacts__title", { delay: 200 });
+      ScrollReveal({
+        origin: "top",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      }).reveal(".contacts__title", { delay: 200 });
+
+      ScrollReveal({
+        origin: "right",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      }).reveal(".contacts__map_iframe", { delay: 500 });
+
+      sr.reveal(".contacts__informations__company", { delay: 250 });
+      sr.reveal(".contacts__informations__phone", { delay: 300 });
+      sr.reveal(".contacts__informations__email", { delay: 350 });
+      sr.reveal(".contacts__informations_button", { delay: 400 })
     },
   },
 };
