@@ -1,10 +1,11 @@
 <template>
   <button
     class="button-action"
+    :class="dark ? 'button-action-dark ' : ''"
     @click="click"
   >
     <p>{{ label }}</p>
-    <img src="img/icons/right.svg">
+    <img :src="icon">
   </button>
 </template>
 
@@ -21,7 +22,17 @@ export default {
       type: Function,
       required: true,
     },
+    dark: {
+      type: Boolean,
+      default: false,
+    }
   },
+
+  computed: {
+    icon() {
+      return this.dark ? 'img/icons/right-white.svg' : 'img/icons/right.svg';
+    }
+  }
 };
 </script>
 
@@ -48,6 +59,16 @@ export default {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 3px;
+  }
+}
+
+.button-action-dark  {
+  background: #333333;
+  &:hover {
+    background: #2c2c2c;
+  }
+  p {
+    color: #ffffff;
   }
 }
 </style>

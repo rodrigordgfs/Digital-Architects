@@ -4,6 +4,8 @@
     <divider />
     <main-focus />
     <divider />
+    <contact />
+    <divider />
   </main>
 </template>
 
@@ -12,6 +14,7 @@
 import Divider from '@/components/shared/Divider'
 import Projects from "./components/projects";
 import MainFocus from "./components/mainFocus";
+import Contact from "./components/contact"
 
 export default {
   name: "Main",
@@ -20,6 +23,7 @@ export default {
     Projects,
     MainFocus,
     Divider,
+    Contact,
   },
 };
 </script>
