@@ -46,7 +46,7 @@ We thank the following people who contributed to this project:
         <img src="https://avatars.githubusercontent.com/u/32286127?v=4" width="100px;" alt="Foto do Rodrigo Shinoda no GitHub"/><br>
         <sub>
           <b>Rodrigo Shinoda</b><br>
-          <a href="https://www.instagram.com/mr_shinodaa">@mr_shinodaa</a>
+          <a href="https://www.instagram.com/mr_shinodaa" target="__blank">@mr_shinodaa</a>
         </sub>
       </a>
     </td>
