@@ -89,6 +89,8 @@ export default {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 10px;
+  display: flex;
+  flex-direction: column;
   .projects__title {
     margin: 60px 0;
   }
@@ -102,5 +104,6 @@ export default {
 
 .projects__divider {
   margin-bottom: 60px;
+  width: 100%;
 }
 </style>
