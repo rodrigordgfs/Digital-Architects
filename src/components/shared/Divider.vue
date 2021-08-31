@@ -1,25 +1,50 @@
 <template>
   <div class="divider-wrapper">
-    <div class="divider" />
+    <div :style="divider" />
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Divider',
-}
+  name: "Divider",
+
+  props: {
+    type: {
+      type: String,
+      validator: (value) => ["section", "horizontal"].includes(value),
+      required: true,
+    },
+  },
+
+  data() {
+    return {
+      isHorizontal: this.type === "horizontal",
+      isSection: this.type === "section",
+      horizontal: {
+        width: "100%",
+        height: "1px",
+        background: "#f2f2f2",
+        margin: "30px 0",
+      },
+      section: {
+        width: "3px",
+        height: "30px",
+        background: "#333333",
+        margin: "50px auto",
+      },
+    };
+  },
+  computed: {
+    divider() {
+      return this.isHorizontal ? this.horizontal : this.section;
+    },
+  },
+};
 </script>
 
 <style lang="scss">
 .divider-wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 50px 0;
-    .divider {
-        width: 3px;
-        height: 30px;
-        background: #333333;
-        margin: 0 auto;
-    }
+  max-width: 1100px;
+  margin: 0 auto;
 }
 </style>

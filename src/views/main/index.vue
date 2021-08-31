@@ -1,20 +1,20 @@
 <template>
   <main class="main">
     <projects />
-    <divider />
+    <divider type="section" />
     <main-focus />
-    <divider />
+    <divider type="section" />
     <contact />
-    <divider />
+    <divider type="section" />
   </main>
 </template>
 
 <script>
 
 import Divider from '@/components/shared/Divider'
-import Projects from "./components/projects";
-import MainFocus from "./components/mainFocus";
-import Contact from "./components/contact"
+import Projects from "@/components/main/projects";
+import MainFocus from "@/components/main/mainFocus";
+import Contact from "@/components/main/contact"
 
 export default {
   name: "Main",
@@ -28,4 +28,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+</style>

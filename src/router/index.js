@@ -12,7 +12,7 @@ const routes = [
   {
     path: "/gallery",
     name: "Gallery",
-    // component: () => import('../views/Main/Main'),
+    component: () => import('../views/gallery'),
   },
   {
     path: "/projects",

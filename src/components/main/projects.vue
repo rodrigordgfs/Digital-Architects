@@ -1,14 +1,10 @@
 <template>
   <section class="projects">
     <div class="projects__content">
-      <div class="projects__content__text">
-        <p class="projects__content__text__title">
-          {{ firstTitle }}
-        </p>
-        <p class="projects__content__text__title__bold">
-          {{ secondTitle }}
-        </p>
-      </div>
+      <section-title 
+        :first="firstTitle"
+        :second="secondTitle"
+      />
       <div class="projects__content__actions">
         <button-indicator
           class="projects__content__actions_left"
@@ -42,6 +38,7 @@
 <script>
 import ButtonIndicator from "@/components/shared/ButtonIndicator";
 import ButtonAction from "@/components/shared/ButtonAction";
+import SectionTitle from "@/components/shared/SectionTitle";
 
 export default {
   name: "Projects",
@@ -49,6 +46,7 @@ export default {
   components: {
     ButtonIndicator,
     ButtonAction,
+    SectionTitle
   },
 
   data() {
@@ -145,21 +143,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-self: center;
-    .projects__content__text {
-      .projects__content__text__title {
-        font-family: "Roboto", sans-serif;
-        font-size: 4rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        color: #bdbdbd;
-      }
-      .projects__content__text__title__bold {
-        font-family: "Roboto", sans-serif;
-        font-size: 4rem;
-        font-weight: 700;
-        color: #333333;
-      }
-    }
     .projects__content__actions {
       display: flex;
       flex-direction: row;
