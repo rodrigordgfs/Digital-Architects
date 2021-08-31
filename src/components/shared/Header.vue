@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header__brand">
-      <a href="/">
+      <a @click="goToMain">
         <img
           src="../../assets/logo.svg"
           alt="Logo Digital Architects"
@@ -77,6 +77,10 @@ export default {
             const menu = document.getElementById("header__menu");
             menu.classList.toggle("active");
         },
+
+        goToMain() {
+            this.$router.push("/");
+        }
     },
 };
 </script>
