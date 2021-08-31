@@ -28,12 +28,32 @@
 <script>
 
 import HeadTitle from '@/components/shared/HeadTitle'
+import ScrollReveal from "scrollreveal";
 
 export default {
     name: "MainFocus",
 
     components: {
         HeadTitle,
+    },
+
+    mounted() {
+      this.scrollReveal();
+    },
+
+    methods: {
+      scrollReveal() {
+      let sr = ScrollReveal({
+        origin: "left",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      });
+
+      sr.reveal(".main-focus__title", { delay: 200 });
+      sr.reveal(".main-focus__item-count", { delay: 250 });
+      sr.reveal(".main-focus__item-text", { delay: 300 });
+    },
     }
 }
 </script>

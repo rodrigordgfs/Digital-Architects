@@ -27,6 +27,7 @@
 <script>
 import SectionTitle from "@/components/shared/SectionTitle";
 import Divider from "@/components/shared/Divider";
+import ScrollReveal from "scrollreveal";
 
 export default {
   name: "Gallery",
@@ -61,6 +62,24 @@ export default {
       }
     };
   },
+
+  mounted() {
+    this.scrollReveal();
+  },
+
+  methods: {
+    scrollReveal() {
+      let sr = ScrollReveal({
+        origin: "top",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      });
+
+      sr.reveal(".gallery__title", { delay: 200 });
+      sr.reveal(".image__viewer", { delay: 250 });
+    },
+  }
 };
 </script>
 

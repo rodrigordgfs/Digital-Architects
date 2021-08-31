@@ -1,7 +1,8 @@
 <template>
   <section class="projects">
     <div class="projects__content">
-      <section-title 
+      <section-title
+        class="projects__content_text"
         :first="firstTitle"
         :second="secondTitle"
       />
@@ -26,10 +27,7 @@
         :style="{ backgroundImage: 'url(' + project.image + ')' }"
       />
       <div class="projects__image_button">
-        <button-action
-          label="View Project"
-          :click="openProject"
-        />
+        <button-action label="View Project" :click="openProject" />
       </div>
     </div>
   </section>
@@ -39,6 +37,7 @@
 import ButtonIndicator from "@/components/shared/ButtonIndicator";
 import ButtonAction from "@/components/shared/ButtonAction";
 import SectionTitle from "@/components/shared/SectionTitle";
+import ScrollReveal from "scrollreveal";
 
 export default {
   name: "Projects",
@@ -46,7 +45,7 @@ export default {
   components: {
     ButtonIndicator,
     ButtonAction,
-    SectionTitle
+    SectionTitle,
   },
 
   data() {
@@ -109,6 +108,7 @@ export default {
 
   mounted() {
     this.project = this.projects[0];
+    this.scrollReveal();
   },
 
   methods: {
@@ -126,6 +126,19 @@ export default {
 
     openProject() {
       this.$router.push(`/projects/${this.project}`);
+    },
+
+    scrollReveal() {
+      let sr = ScrollReveal({
+        origin: "top",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      });
+
+      sr.reveal(".projects__content_text", { delay: 200 });
+      sr.reveal(".projects__content__actions", { delay: 250 });
+      sr.reveal(".projects__image", { delay: 300 });
     },
   },
 };
