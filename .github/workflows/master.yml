@@ -1,7 +1,7 @@
 on:
   push:
-    branches:
-      - master
+    tags:
+      - "*.*.*"
 name: 🚀 Deploy to Master
 jobs:
   web-deploy:
