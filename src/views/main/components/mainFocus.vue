@@ -10,7 +10,7 @@
           1
         </p>
         <p class="main-focus__item-text">
-          Laborum deserunt duis est commodo. Do mollit Lorem elit minim aute Lorem dolore excepteur Lorem consectetur proident.
+          It's famous because of the company's existence, it's something non-concrete that drives the organization from its creation to the end of it. It is giving meaning to existence, a motivation.
         </p>
       </div>
       <div class="main-focus__item">
@@ -18,7 +18,7 @@
           2
         </p>
         <p class="main-focus__item-text">
-          Laborum deserunt duis est commodo. Do mollit Lorem elit minim aute Lorem dolore excepteur Lorem consectetur proident.
+          It's the dreamy side of the company, it's when an organization looks to the future and thinks “This is what I want to be”, and based on this, the company walks in search of what was projected for the coming years.
         </p>
       </div>
     </div>
@@ -70,6 +70,9 @@ export default {
                 font-size: 22px;
                 color: #333333;
             }
+        }
+        &:nth-child(2) {
+          margin-bottom: 55px;
         }
     }
 }
