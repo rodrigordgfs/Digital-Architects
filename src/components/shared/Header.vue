@@ -97,6 +97,9 @@ header {
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    .header__brand {
+        cursor: pointer;
+    }
     #header__menu {
         .header__menu_items {
             display: flex;

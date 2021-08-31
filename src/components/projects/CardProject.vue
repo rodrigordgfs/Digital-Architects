@@ -39,7 +39,9 @@ export default {
   },
 
   methods: {
-    viewMore() {},
+    viewMore() {
+      this.$router.push(`/projects/${this.project.id}`);
+    },
   },
 };
 </script>

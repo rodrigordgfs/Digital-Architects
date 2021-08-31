@@ -5,6 +5,7 @@
         class="projects__content_text"
         :first="firstTitle"
         :second="secondTitle"
+        first-uppercase
       />
       <div class="projects__content__actions">
         <button-indicator
@@ -128,7 +129,7 @@ export default {
     },
 
     openProject() {
-      this.$router.push(`/projects/${this.project}`);
+      this.$router.push(`/projects/${this.project.id}`);
     },
 
     scrollReveal() {

@@ -23,7 +23,7 @@ const routes = [
     path: "/projects/:id",
     name: "Project",
     hidden: true,
-    // component: () => import("../views/projectsDetail"),
+    component: () => import("../views/projectDetail"),
   },
   {
     path: "/certifications",

@@ -105,7 +105,7 @@ export default {
 <style lang="scss">
 .contact {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   padding: 0 10px;
   .contact__container {
       display: flex;

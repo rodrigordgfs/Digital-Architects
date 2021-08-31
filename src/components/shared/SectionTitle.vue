@@ -1,6 +1,9 @@
 <template>
   <div class="section__title__wrapper">
-    <p class="section__title__first">
+    <p
+      class="section__title__first"
+      :style="{ textTransform: firstUppercase ? 'uppercase' : 'capitalize' }"
+    >
       {{ first }}
     </p>
     <p class="section__title__second">
@@ -14,15 +17,19 @@ export default {
   name: "SectionTitle",
 
   props: {
-      first: {
-          type: String,
-          required: true
-      },
-      second: {
-          type: String,
-          required: true
-      },
-  }
+    first: {
+      type: String,
+      required: true,
+    },
+    firstUppercase: {
+      type: Boolean,
+      default: false,
+    },
+    second: {
+      type: String,
+      required: true,
+    },
+  },
 };
 </script>
 
@@ -32,7 +39,6 @@ export default {
     font-family: "Roboto", sans-serif;
     font-size: 4rem;
     font-weight: 300;
-    text-transform: uppercase;
     color: #bdbdbd;
   }
   .section__title__second {

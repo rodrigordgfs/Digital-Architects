@@ -1,17 +1,17 @@
 <template>
   <main class="main">
     <projects />
-    <divider type="section" />
+    <scroll-down-icon />
     <main-focus />
     <divider type="section" />
     <contact />
-    <divider type="section" />
   </main>
 </template>
 
 <script>
 
 import Divider from '@/components/shared/Divider'
+import ScrollDownIcon from '@/components/shared/ScrollDownIcon'
 import Projects from "@/components/main/projects";
 import MainFocus from "@/components/main/mainFocus";
 import Contact from "@/components/main/contact"
@@ -24,6 +24,7 @@ export default {
     MainFocus,
     Divider,
     Contact,
+    ScrollDownIcon,
   },
 };
 </script>
