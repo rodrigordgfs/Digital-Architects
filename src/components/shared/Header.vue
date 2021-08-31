@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header__brand">
-      <a href="#">
+      <a href="/">
         <img
           src="../../assets/logo.svg"
           alt="Logo Digital Architects"
