@@ -4,7 +4,10 @@
     :class="disabled ? 'button-indicator__disabled' : null"
     @click="click"
   >
-    <img :src="icon">
+    <img
+      v-if="showIcon"
+      :src="icon"
+    >
   </span>
 </template>
 
@@ -15,11 +18,15 @@ export default {
   props: {
     side: {
       type: String,
-      required: true,
+      default: 'right'
     },
     disabled: {
       type: Boolean,
       default: false,
+    },
+    showIcon: {
+      type: Boolean,
+      default: true,
     },
     click: {
       type: Function,

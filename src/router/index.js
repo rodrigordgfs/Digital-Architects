@@ -12,22 +12,28 @@ const routes = [
   {
     path: "/gallery",
     name: "Gallery",
-    component: () => import('../views/gallery'),
+    component: () => import("../views/gallery"),
   },
   {
     path: "/projects",
     name: "Projects",
-    // component: () => import('../views/Main/Main'),
+    component: () => import("../views/projects"),
+  },
+  {
+    path: "/projects/:id",
+    name: "Project",
+    hidden: true,
+    // component: () => import("../views/projectsDetail"),
   },
   {
     path: "/certifications",
     name: "Certifications",
-    // component: () => import('../views/Main/Main'),
+    component: () => import('../views/certifications'),
   },
   {
     path: "/contacts",
     name: "Contacts",
-    // component: () => import('../views/Main/Main'),
+    component: () => import('../views/contacts'),
   },
 ];
 
