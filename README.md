@@ -11,7 +11,7 @@ This is a project that I found the layout in the Figma community and created the
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
-  - [Author](#author)
+- [Contributors](#contributors)
 
 ## Overview
 
@@ -35,7 +35,20 @@ This is a project that I found the layout in the Figma community and created the
 - Animations
 - Mobile-first workflow
 
-## Author
+# Contributors
 
-- Website - [ShinodaLabs](https://shinodalabs.com.br)
-- Instagram - [@mr_shinodaa](https://www.instagram.com/mr_shinodaa)
+We thank the following people who contributed to this project:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/rodrigordgfs">
+        <img src="https://avatars.githubusercontent.com/u/32286127?v=4" width="100px;" alt="Foto do Rodrigo Shinoda no GitHub"/><br>
+        <sub>
+          <b>Rodrigo Shinoda</b><br>
+          <a href="https://www.instagram.com/mr_shinodaa">@mr_shinodaa</a>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
