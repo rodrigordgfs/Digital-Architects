@@ -4,7 +4,7 @@
       <div class="footer__content">
         <div class="footer__content__brand">
           <img
-            src="/img/icons/logo-white.svg"
+            src="img/icons/logo-white.svg"
             alt="Logo"
           >
         </div>
@@ -84,17 +84,17 @@ export default {
 
       contacts: [
         {
-          icon: "/img/icons/location.svg",
+          icon: "img/icons/location.svg",
           type: "Address",
           text: "1234 Sample Street, Austin Texas 78704",
         },
         {
-          icon: "/img/icons/phone.svg",
+          icon: "img/icons/phone.svg",
           type: "Phone",
           text: "512.333.2222",
         },
         {
-          icon: "/img/icons/mail.svg",
+          icon: "img/icons/mail.svg",
           type: "E-Mail",
           text: "sample@shinodalabs.com.br",
         },
@@ -102,22 +102,22 @@ export default {
 
       socialMedias: [
         {
-          icon: "/img/icons/facebook.svg",
+          icon: "img/icons/facebook.svg",
           link: "https://facebook.com",
           title: "Facebook",
         },
         {
-          icon: "/img/icons/twitter.svg",
+          icon: "img/icons/twitter.svg",
           link: "https://twitter.com",
           title: "Twitter",
         },
         {
-          icon: "/img/icons/linkedin.svg",
+          icon: "img/icons/linkedin.svg",
           link: "https://linkedin.com",
           title: "Linkedin",
         },
         {
-          icon: "/img/icons/pinterest.svg",
+          icon: "img/icons/pinterest.svg",
           link: "https://pinterest.com",
           title: "Pinterest",
         },
